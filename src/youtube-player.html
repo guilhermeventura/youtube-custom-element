@@ -1,0 +1,31 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.1.4/polymer.js"></script>
+
+<polymer-element name="youtube-player" attributes="href width height">
+	<template>
+		<iframe width="{{width}}" height="{{height}}" src="//www.youtube.com/embed/{{href}}" frameborder="0" allowfullscreen></iframe>
+	</template>
+	
+	<script>
+		Polymer('youtube-player', {
+			width: '',
+			height: '',
+			href: 'xxxx',
+			getID: function(url){
+				var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+				var videoID = url.match(regExp);
+							
+				if ( videoID && videoID[7].length == 11 ) {
+					return videoID[7];
+				} else {
+					console.log('false');
+				}
+				
+			},
+			ready: function () {
+				if (this.href != 'xxxx') {
+					this.href = this.getID(this.href);
+				}
+			}
+		});				
+	</script>
+</polymer-element>
