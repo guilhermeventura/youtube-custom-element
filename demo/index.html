@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Youtube Easy Embed Custom Element</title>
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.1.4/platform.js" shadow></script>
+	<link rel="import" href="../src/youtube-player.html" />
+	
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,900' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="styles/demo.css" type="text/css" />
+</head>
+<body>
+    <main>
+	    <hgroup>
+	        <h1>Youtube CustomElement Embed</h1>
+	        <h2>Now it's simple, just use the full Youtube Video URL below:</h2>
+	    </hgroup>
+	    
+	    <input type="text" id="videoURL" placeholder="Insert the Youtube Video URL here">
+	    
+	    <youtube-player width="640" height="360" href="https://www.youtube.com/watch?v=Lsj0mY13t9s"></youtube-player>
+	</main>
+	
+    <script src="scripts/demo.js"></script>	
+</body>
+</html>
