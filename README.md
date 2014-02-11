@@ -4,7 +4,7 @@ Web Component for simply embed Youtube Videos using the entire video URL, uses P
 
 ## Demo
 
-Comming Soon
+Try it Live [here](http://guilhermeventura.com.br/youtube-custom-element/demo/).
 
 ## Options
 | Name| Description |
